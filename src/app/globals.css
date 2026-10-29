@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+/* PlusOne Connect brand kit, same tokens as the app: mostly light and airy,
+   charcoal for weight, sage straight from the logo, peach in small doses. */
+@theme {
+  --color-charcoal: #2e2e2e;
+  --color-paper: #f5f3e6;
+  --color-sage: #8dae9b;
+  --color-sage-ink: #4e7360;
+  --color-stone: #ddd6ca;
+  --color-peach: #efd9c4;
+  --color-muted: #6b675f;
+  --font-sans: var(--font-montserrat), "Helvetica Neue", Arial, sans-serif;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-charcoal);
+  font-weight: 300;
+}
+
+/* Small tracked capitals: labels and eyebrows */
+@utility eyebrow {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+
+/* Pill buttons from the UI kit: filled and outlined */
+@utility btn {
+  border-radius: 9999px;
+  padding: 0.95rem 1.5rem;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  transition:
+    background-color 200ms,
+    color 200ms;
+}
+@utility btn-dark {
+  background: var(--color-charcoal);
+  color: var(--color-paper);
+  &:hover {
+    background: #000;
+  }
+}
+@utility btn-line {
+  border: 1px solid var(--color-charcoal);
+  color: var(--color-charcoal);
+  &:hover {
+    background: var(--color-charcoal);
+    color: var(--color-paper);
+  }
+}
