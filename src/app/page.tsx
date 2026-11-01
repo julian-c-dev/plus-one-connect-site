@@ -5,6 +5,9 @@ import type { ReactNode } from "react";
 // follows the business plan (Plus One repo, docs/business-plan.md); no prices
 // until they are agreed with organisers.
 
+/** The clickable demo. It sits behind the staging password, so share that too. */
+const DEMO_URL = "https://plusone-6a2jr.projectbeta.co.uk/";
+
 /** Address for enquiries, the page's main call to action. */
 const CONTACT_EMAIL = "info@plus1connect.com";
 const CONTACT_URL = `mailto:${CONTACT_EMAIL}?subject=PlusOne%20Connect`;
@@ -150,6 +153,9 @@ export default function Pilot() {
           <div className="mt-9 flex flex-wrap gap-3">
             <a href={CONTACT_URL} className="btn btn-dark">
               Talk to us
+            </a>
+            <a href="#pilot" className="btn btn-line">
+              Run a pilot with us
             </a>
           </div>
         </div>
@@ -328,6 +334,12 @@ export default function Pilot() {
               and enjoy shared experiences?
             </p>
           </div>
+        </div>
+
+        <div className="mt-10">
+          <a href={DEMO_URL} target="_blank" rel="noopener" className="btn btn-line">
+            Try the demo
+          </a>
         </div>
       </section>
 
