@@ -101,7 +101,7 @@ const metrics = [
 
 export default function Pilot() {
   return (
-    <div className="bg-paper">
+    <div className="overflow-x-clip bg-paper">
       <header className="sticky top-0 z-20 border-b border-stone/70 bg-paper/90 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
           <Image
@@ -112,7 +112,7 @@ export default function Pilot() {
             priority
             className="h-12 w-auto"
           />
-          <nav className="hidden gap-7 md:flex">
+          <nav className="hidden gap-7 lg:flex">
             {[
               ["#how", "How it works"],
               ["#organisers", "Organisers"],
@@ -122,13 +122,13 @@ export default function Pilot() {
               <a
                 key={href}
                 href={href}
-                className="eyebrow text-[10px] text-muted hover:text-charcoal"
+                className="eyebrow text-[12px] text-muted hover:text-charcoal"
               >
                 {label}
               </a>
             ))}
           </nav>
-          <a href={CONTACT_URL} className="btn btn-dark px-5 py-2.5 text-[11px]">
+          <a href={CONTACT_URL} className="btn btn-dark px-5 py-2.5 text-[12px]">
             Talk to us
           </a>
         </div>
@@ -228,7 +228,7 @@ export default function Pilot() {
                   className="h-20 w-20 shrink-0 rounded-xl object-cover"
                 />
                 <div className="min-w-0">
-                  <p className="eyebrow text-[10px] text-muted">
+                  <p className="eyebrow text-[11px] text-muted">
                     {a.time}
                     {a.tag && <span className="ml-2 text-sage-ink">· {a.tag}</span>}
                   </p>
@@ -327,19 +327,21 @@ export default function Pilot() {
               ))}
             </ul>
           </div>
-          <div className="flex flex-col justify-center">
+          <div className="flex flex-col items-center justify-center text-center">
             <p className="eyebrow text-sage">The real question</p>
             <p className="mt-4 text-2xl leading-snug font-normal tracking-tight">
               Did PlusOne Connect help people who might have spent the day alone connect with others
               and enjoy shared experiences?
             </p>
+            <a
+              href={DEMO_URL}
+              target="_blank"
+              rel="noopener"
+              className="btn mt-8 border border-paper text-paper hover:bg-paper hover:text-charcoal"
+            >
+              Try the demo
+            </a>
           </div>
-        </div>
-
-        <div className="mt-10">
-          <a href={DEMO_URL} target="_blank" rel="noopener" className="btn btn-line">
-            Try the demo
-          </a>
         </div>
       </section>
 
