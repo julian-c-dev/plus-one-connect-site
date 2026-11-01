@@ -9,7 +9,7 @@ import type { ReactNode } from "react";
 const DEMO_URL = "https://plusone-6a2jr.projectbeta.co.uk/";
 
 /** Address for pilot enquiries. While null, the page only offers the demo. */
-const CONTACT_EMAIL: string | null = null;
+const CONTACT_EMAIL: string | null = "info@plus1connect.com";
 
 const day = [
   {
