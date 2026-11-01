@@ -5,11 +5,9 @@ import type { ReactNode } from "react";
 // follows the business plan (Plus One repo, docs/business-plan.md); no prices
 // until they are agreed with organisers.
 
-/** The clickable demo. It sits behind the staging password, so share that too. */
-const DEMO_URL = "https://plusone-6a2jr.projectbeta.co.uk/";
-
-/** Address for pilot enquiries. While null, the page only offers the demo. */
-const CONTACT_EMAIL: string | null = "info@plus1connect.com";
+/** Address for enquiries, the page's main call to action. */
+const CONTACT_EMAIL = "info@plus1connect.com";
+const CONTACT_URL = `mailto:${CONTACT_EMAIL}?subject=PlusOne%20Connect`;
 
 const day = [
   {
@@ -127,8 +125,8 @@ export default function Pilot() {
               </a>
             ))}
           </nav>
-          <a href={DEMO_URL} className="btn btn-dark px-5 py-2.5 text-[11px]">
-            Try the demo
+          <a href={CONTACT_URL} className="btn btn-dark px-5 py-2.5 text-[11px]">
+            Talk to us
           </a>
         </div>
       </header>
@@ -150,11 +148,8 @@ export default function Pilot() {
             with its programme.
           </p>
           <div className="mt-9 flex flex-wrap gap-3">
-            <a href="#pilot" className="btn btn-dark">
-              Run a pilot with us
-            </a>
-            <a href={DEMO_URL} className="btn btn-line">
-              Try the demo
+            <a href={CONTACT_URL} className="btn btn-dark">
+              Talk to us
             </a>
           </div>
         </div>
@@ -353,20 +348,12 @@ export default function Pilot() {
             You have your community.
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-muted">
-            See it the way a companion would: open the invitation, pick a plan and meet the group.
+            Organising a conference or running a conference hotel? Tell us about your event.
           </p>
           <div className="mt-9 flex flex-wrap justify-center gap-3">
-            <a href={DEMO_URL} className="btn btn-dark">
-              Try the demo
+            <a href={CONTACT_URL} className="btn btn-dark">
+              Talk to us
             </a>
-            {CONTACT_EMAIL && (
-              <a
-                href={`mailto:${CONTACT_EMAIL}?subject=PlusOne%20Connect%20pilot`}
-                className="btn btn-line"
-              >
-                Talk to us about a pilot
-              </a>
-            )}
           </div>
         </div>
       </section>
@@ -380,6 +367,9 @@ export default function Pilot() {
           className="h-10 w-10"
         />
         <p>The companion experience platform for business events.</p>
+        <a href={CONTACT_URL} className="text-charcoal underline-offset-4 hover:underline">
+          {CONTACT_EMAIL}
+        </a>
       </footer>
     </div>
   );
